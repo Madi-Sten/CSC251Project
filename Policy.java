@@ -1,14 +1,14 @@
 public class Policy{
 
    //Private Fields:
-   private int policy_Number;
-   private String provider_Name;
-   private String policyholder_First_Name;
-   private String policyholder_Last_Name;
-   private int policyholder_Age;   
-   private boolean policyholder_Smoking_Status;
-   private double policyholder_Height;
-   private double policyholder_Weight;
+   private int policy_Number = 0;
+   private String provider_Name = "";
+   private String policyholder_First_Name = "";
+   private String policyholder_Last_Name = "";
+   private int policyholder_Age = 0;   
+   private String policyholder_Smoking_Status = "";
+   private double policyholder_Height = 0.0;
+   private double policyholder_Weight = 0.0;
    
    //Constants:
    private final int POLICY_BASE_FEE = 600;
@@ -16,28 +16,20 @@ public class Policy{
    private final int SMOKER_BASE_FEE = 100;
    
    //Default, no arguments Constructor:
-   public void Policy(){
-      this.policy_Number = 0;
-      this.provider_Name = "";
-      this.policyholder_First_Name = "";
-      this.policyholder_Last_Name = "";
-      this.policyholder_Age = 0;   
-      this.policyholder_Smoking_Status = false;
-      this.policyholder_Height = 0.0;
-      this.policyholder_Weight = 0.0;
-   }
+   //public void Policy(){}
+   
    
    //Argument Constructor:
    //Arguments: int, String, String, String, int, boolean, double, double
-   public void Policy(int policy, String provider, String first_Name, String last_Name, int age, boolean is_Smoker, double height, double weight){
-      this.policy_Number = policy;
-      this.provider_Name = provider;
-      this.policyholder_First_Name = first_Name;
-      this.policyholder_Last_Name = last_Name;
-      this.policyholder_Age = age;   
-      this.policyholder_Smoking_Status = is_Smoker;
-      this.policyholder_Height = height;
-      this.policyholder_Weight = weight;
+   public Policy(int policy, String provider, String first_Name, String last_Name, int age, String is_Smoker, double height, double weight){
+      policy_Number = policy;
+      provider_Name = provider;
+      policyholder_First_Name = first_Name;
+      policyholder_Last_Name = last_Name;
+      policyholder_Age = age;   
+      policyholder_Smoking_Status = is_Smoker;
+      policyholder_Height = height;
+      policyholder_Weight = weight;
    }
    
    //Access Methods:
@@ -68,7 +60,7 @@ public class Policy{
    }
    
    //Get Policyholder Smoking Status:
-   public boolean get_Policyholder_Smoking_Status(){
+   public String get_Policyholder_Smoking_Status(){
       return this.policyholder_Smoking_Status;
    }
    
@@ -112,7 +104,7 @@ public class Policy{
    }
    
    //Set Policyholder Smoking Status:
-   public void set_Policyholder_Smoking_Status(boolean is_Smoker){
+   public void set_Policyholder_Smoking_Status(String is_Smoker){
       this.policyholder_Smoking_Status = is_Smoker;
    }
    
@@ -125,6 +117,7 @@ public class Policy{
    public void set_Policyholder_Weight(double weight){
       this.policyholder_Weight = weight;
    }
+   //
    //End of Mutator Methods.
    
    
@@ -143,7 +136,7 @@ public class Policy{
       if(this.policyholder_Age > 50){
          price += AGE_50_BASE_FEE;
       }
-      if(this.policyholder_Smoking_Status == true){
+      if(this.policyholder_Smoking_Status == "smoker"){
          price += SMOKER_BASE_FEE;
       }
       if(bMI > 35){
