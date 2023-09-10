@@ -16,7 +16,7 @@ public class Policy{
    private final int SMOKER_BASE_FEE = 100;
    
    //Default, no arguments Constructor:
-   //public void Policy(){}
+   public void Policy(){}
    
    
    //Argument Constructor:
