@@ -15,7 +15,7 @@ public static void main(String[] args){
    String policyholder_First_Name = "";
    String policyholder_Last_Name = "";
    int policyholder_Age = 0;
-   String policyholder_Smoking_Status = "";
+   boolean policyholder_Smoking_Status = false;
    double policyholder_Height = 0.0;
    double policyholder_Weight = 0.0;
    
@@ -52,8 +52,8 @@ public static void main(String[] args){
    console.nextLine();
 
    //Policyholder's Smoking Status:
-   System.out.println("Please enter the Policyholder's Smoking Status (smoker/non-smoker): ");
-   policyholder_Smoking_Status = console.nextLine();
+   System.out.println("Please enter the Policyholder's Smoking Status (true = smoker / false = non-smoker): ");
+   policyholder_Smoking_Status = console.nextBoolean();
    
    //Policyholder's Height:
    System.out.println("Please enter the Policyholder's Height (in inches): ");

@@ -6,7 +6,7 @@ public class Policy{
    private String policyholder_First_Name = "";
    private String policyholder_Last_Name = "";
    private int policyholder_Age = 0;   
-   private String policyholder_Smoking_Status = "";
+   private boolean policyholder_Smoking_Status = false;
    private double policyholder_Height = 0.0;
    private double policyholder_Weight = 0.0;
    
@@ -21,7 +21,7 @@ public class Policy{
    
    //Argument Constructor:
    //Arguments: int, String, String, String, int, boolean, double, double
-   public Policy(int policy, String provider, String first_Name, String last_Name, int age, String is_Smoker, double height, double weight){
+   public Policy(int policy, String provider, String first_Name, String last_Name, int age, boolean is_Smoker, double height, double weight){
       policy_Number = policy;
       provider_Name = provider;
       policyholder_First_Name = first_Name;
@@ -60,7 +60,7 @@ public class Policy{
    }
    
    //Get Policyholder Smoking Status:
-   public String get_Policyholder_Smoking_Status(){
+   public boolean get_Policyholder_Smoking_Status(){
       return this.policyholder_Smoking_Status;
    }
    
@@ -104,7 +104,7 @@ public class Policy{
    }
    
    //Set Policyholder Smoking Status:
-   public void set_Policyholder_Smoking_Status(String is_Smoker){
+   public void set_Policyholder_Smoking_Status(boolean is_Smoker){
       this.policyholder_Smoking_Status = is_Smoker;
    }
    
@@ -136,7 +136,7 @@ public class Policy{
       if(this.policyholder_Age > 50){
          price += AGE_50_BASE_FEE;
       }
-      if(this.policyholder_Smoking_Status == "smoker"){
+      if(this.policyholder_Smoking_Status == true){
          price += SMOKER_BASE_FEE;
       }
       if(bMI > 35){
