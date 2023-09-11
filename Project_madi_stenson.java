@@ -66,10 +66,7 @@ public static void main(String[] args){
    //Create Policy Object w/ assigned arguments:
    Policy john = new Policy(policy_Number, provider_Name, policyholder_First_Name, policyholder_Last_Name, policyholder_Age, policyholder_Smoking_Status, policyholder_Height, policyholder_Weight);
    
-   john_bMI = john.get_Policyholder_BMI();
-   
-   john_Policy_Price = john.get_Policy_Price();
-   
+     
    //Output:
    System.out.println("Policy Number: " + john.get_Policy_Number() + "\nProvider Name: " + john.get_Provider_Name() + "\nPolicyholder's First Name: " 
    + john.get_Policyholder_First_Name() + "\nPolicyholder's Last Name: " + john.get_Policyholder_Last_Name() + "\nPolicyholder's Age: " 
@@ -80,5 +77,3 @@ public static void main(String[] args){
    
 }//End of Main Method.
 }//End of Demo Class.
-
-

@@ -60,8 +60,14 @@ public class Policy{
    }
    
    //Get Policyholder Smoking Status:
-   public boolean get_Policyholder_Smoking_Status(){
-      return this.policyholder_Smoking_Status;
+   public String get_Policyholder_Smoking_Status(){
+      if(this.policyholder_Smoking_Status == true){
+         return "smoker";
+      }
+      if(this.policyholder_Smoking_Status == false){
+         return "non-smoker";
+      }
+      return "Error!";
    }
    
    //Get Policyholder Height:
